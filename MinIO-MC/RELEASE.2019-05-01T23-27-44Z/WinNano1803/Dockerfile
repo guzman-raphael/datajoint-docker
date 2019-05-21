@@ -1,9 +1,8 @@
-MAINTAINER raphael.h.guzman@gmail.com
 FROM stefanscherer/netapi-helper:1803 as core
 FROM mcr.microsoft.com/powershell:6.2.0-nanoserver-1803
-COPY --from=core /windows/system32/netapi32.dll /windows/system32/netapi32.dll
-
 MAINTAINER raphael.h.guzman@gmail.com
+
+COPY --from=core /windows/system32/netapi32.dll /windows/system32/netapi32.dll
 
 ENV MINIO_ACCESS_KEY datajoint
 ENV MINIO_SECRET_KEY datajoint

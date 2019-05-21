@@ -1,6 +1,5 @@
-MAINTAINER raphael.h.guzman@gmail.com
 FROM microsoft/windowsservercore:1803 as base
-
+MAINTAINER raphael.h.guzman@gmail.com
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 ENV PYTHON_VERSION 3.6.5

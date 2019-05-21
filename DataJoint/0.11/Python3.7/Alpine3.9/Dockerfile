@@ -1,10 +1,9 @@
 # docker build --build-arg DJ_VER=v0.12.dev4 .
-MAINTAINER raphael.h.guzman@gmail.com
 ARG  PY_VER=3.7
 ARG  ALPINE_VER=3.9
 ARG  DJ_VER=v0.11.1
 FROM python:${PY_VER}-alpine${ALPINE_VER}
-
+MAINTAINER raphael.h.guzman@gmail.com
 # min datajoint
 RUN \
   apk update && \

@@ -1,5 +1,3 @@
-MAINTAINER raphael.h.guzman@gmail.com
-
 FROM mcr.microsoft.com/powershell:6.2.0-nanoserver-1803
 
 MAINTAINER raphael.h.guzman@gmail.com

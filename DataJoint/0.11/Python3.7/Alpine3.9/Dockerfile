@@ -47,7 +47,7 @@ RUN \
   apk --no-cache --update-cache add git && \
   mkdir /src && \
   cd /src && \
-  git clone -b ${DJ_VER} --single-branch https://github.com/datajoint/datajoint-python.git && \
+  git clone -b ${DJ_VER} https://github.com/datajoint/datajoint-python.git && \
   cd datajoint-python && \
   pip install .  
 

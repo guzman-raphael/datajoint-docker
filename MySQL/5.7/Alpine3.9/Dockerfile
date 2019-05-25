@@ -15,6 +15,8 @@ https://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.44.tar.gz
 https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.22.tar.gz
 https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.16.tar.gz
 
+cmake g++ git boost-dev
+cmake .. -DWITH_BOOST=/usr/include/boost
 
 # Preconfiguration setup
 addgroup mysql

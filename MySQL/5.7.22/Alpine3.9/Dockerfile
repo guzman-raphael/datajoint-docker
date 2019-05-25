@@ -18,10 +18,11 @@ https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.16.tar.gz
 
 # Preconfiguration setup
 addgroup mysql
-useradd -G mysql -s /bin/false mysql
+adduser -G mysql -s /bin/false mysql
 # Beginning of source-build specific instructions
-tar zxvf mysql-VERSION.tar.gz
-cd mysql-VERSION
+wget -O mysql.tar.gz https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.22.tar.gz
+tar zxvf mysql.tar.gz
+cd mysql-*
 ./configure --prefix=/usr/local/mysql
 make
 make install

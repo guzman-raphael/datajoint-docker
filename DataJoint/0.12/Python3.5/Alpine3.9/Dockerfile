@@ -2,7 +2,8 @@
 ARG  PY_VER=3.5
 ARG  ALPINE_VER=3.9
 FROM python:${PY_VER}-alpine${ALPINE_VER}
-ARG  DJ_VER=v0.12.dev4
+# ARG  DJ_VER=v0.12.dev4
+ARG  DJ_VER=dev
 MAINTAINER raphael.h.guzman@gmail.com
 
 # min datajoint

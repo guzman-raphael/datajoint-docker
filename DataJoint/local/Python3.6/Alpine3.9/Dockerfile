@@ -1,8 +1,7 @@
 # docker build --build-arg DJ_VER=v0.12.dev4 .
-ARG  PY_VER=3.7
+ARG  PY_VER=3.6
 ARG  ALPINE_VER=3.9
 FROM python:${PY_VER}-alpine${ALPINE_VER}
-ARG  DJ_VER=v0.12.dev4
 MAINTAINER raphael.h.guzman@gmail.com
 
 # min datajoint
@@ -43,13 +42,9 @@ RUN \
   apk del build-erd-dependencies && \
   apk del build-jnb-dependencies
 
-# Install DataJoint
+# Prep DataJoint
 RUN \
   apk --no-cache --update-cache add git && \
-  mkdir /src && \
-  cd /src && \
-  git clone -b ${DJ_VER} --single-branch https://github.com/datajoint/datajoint-python.git && \
-  cd datajoint-python && \
-  pip install .  
+  mkdir /src 
 
 CMD ["python","--version"]
